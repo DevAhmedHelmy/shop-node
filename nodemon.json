@@ -1,0 +1,8 @@
+{
+    "env":{
+        "MONGO_USER":"helmy",
+        "MONGO_PASSWORD":"jXef9jwRbG66GQ9Y",
+        "MONGO_DB_NAME":"shop",
+        "PORT":"3000"
+    }
+}

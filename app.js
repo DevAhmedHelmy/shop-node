@@ -1,6 +1,7 @@
 const express = require("express");
-const MONGODB_URI =
-  "mongodb+srv://helmy:jXef9jwRbG66GQ9Y@cluster0.ogtsr.mongodb.net/shop";
+
+require("dotenv").config();
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.ogtsr.mongodb.net/${process.env.MONGO_DB_NAME}`;
 const app = express();
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
@@ -119,7 +120,7 @@ mongoose
         });
       }
     });
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
   })
   .catch((err) => {
     console.log(err);
